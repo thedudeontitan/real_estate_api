@@ -19,9 +19,9 @@ def get_html(url):
     headers = {'user-agent': ua}
     data = requests.get(url,headers=headers).text
     sleep(5)
-    return data
-    # with open('ca.html','w') as f:
+    # return data
+    with open('ca.html','w') as f:
     #     # f.write("\n".join(set(re.findall(re_home,data))))
-    #     f.write(data)
+        f.write(data)
 
-# get_url('https://www.apartments.com/garnet-creek-rocklin-ca/kxfykgb/')
+get_html('https://www.redfin.com/CA/San-Diego/Undisclosed-address-92102/home/5773042')
